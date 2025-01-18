@@ -1,0 +1,83 @@
+:root {
+  --blue1: #0d92f4;
+  --blue2: #77cdff;
+  --merah1: #f95454;
+  --hitam: #333;
+  --putih: #fff;
+  --gray-light: #f7f7f7;
+  --gray-dark: #888;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  color: var(--hitam);
+  background-color: var(--putih);
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--blue1);
+  color: var(--merah1);
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--putih);
+}
+
+nav ul li:hover {
+  background-color: var(--putih);
+  color: var(--hitam);
+  border-radius: 5px;
+}
+
+#clock {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: var(--gray-light);
+}
+
+main {
+  padding: 10px;
+}
+
+.product-section {
+  text-align: center;
+}
+
+.product-section .btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: var(--putih);
+  background-color: var(--blue1);
+  border-radius: 5px;
+}

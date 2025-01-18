@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Secretlah</title>
+    <link rel="stylesheet" href="Assets/zovie.css" />
+  </head>
+  <body>
+    <div>
+      <header>
+        <nav>
+          <ul>
+            <li><a href="Zoovie.html">Home</a></li>
+          </ul>
+        </nav>
+        <div id="clock"></div>
+      </header>
+      <main>
+        <section>
+          <div class="product-section">
+            <br />
+            <h2>Daftar Produk Secretlah</h2>
+            <a href="daftarprodk.html" class="btn">Secretlah</a>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script>
+      setInterval(() => {
+        const date = new Date();
+        const clock = document.getElementById("clock");
+        clock.innerHTML = date.toLocaleTimeString();
+      }, 1000);
+    </script>
+  </body>
+</html>

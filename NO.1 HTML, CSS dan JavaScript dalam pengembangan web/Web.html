@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Start-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!--End-->
+
+    <title>NewsMan</title>
+    <link rel="stylesheet" href="./Assets/CSS/webst.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+          <ul>
+            <li><a href="Web.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+        <div id="clock"></div>
+      </header>
+
+      <section class="Man-news">
+        <p><strong>Hot News:</strong> Generasi Z semakin mendominasi dunia.</p>
+      </section>
+
+      <section class="slider-container">
+        <h3>Hot News Lainnya</h3>
+        <div class="slider">
+          <figure class="active">
+            <img src="Assets/image/news-thumbnail.jpg" alt="Anak muda" />
+            <figcaption>Anak muda yang menjaga pohon</figcaption>
+          </figure>
+        </div>
+        <div class="slider">
+          <figure>
+            <img
+              src="Assets/image/news-thumbnail1.jpg"
+              alt="Inovasi teknologi"
+            />
+            <figcaption>Inovasi teknologi terbaru dari Gen Z</figcaption>
+          </figure>
+        </div>
+        <div class="slider">
+          <figure>
+            <img src="Assets/image/news-thumbnail2.jpg" alt="Kerja Remote" />
+            <figcaption>
+              Popularitas kerja remote di kalangan anak muda
+            </figcaption>
+          </figure>
+        </div>
+        <div class="slider">
+          <figure>
+            <img src="Assets/image/news-thumbnail3.jpg" alt="Generasi Beta" />
+            <figcaption>Generasi Beta dan masa depan mereka</figcaption>
+          </figure>
+        </div>
+
+        <div class="nav-btns">
+          <button class="left">&#9664;</button>
+          <button class="right">&#9654;</button>
+        </div>
+      </section>
+
+      <main>
+        <section>
+          <article>
+            <h3>Gen Z atau Milenial Akhir, Siapa Lebih Sadar Kontrasepsi?</h3>
+            <p>
+              Generasi orangtua dari bayi Generasi Beta atau Gen Beta saat ini
+              sebagian besar berasal dari dua kelompok, yaitu Gen Z awal dan
+              Milenial akhir. Meski berada di rentang usia yang relatif dekat,
+              ternyata kesadaran kedua generasi ini terhadap kontrasepsi
+              menunjukkan perbedaan yang signifikan.
+            </p>
+          </article>
+          <article>
+            <h3>Kenapa Gen-Z Lebih Suka Freelance daripada Kerja Kantoran?</h3>
+            <p>
+              Saat ini, Gen-Z mendominasi pasar tenaga kerja dengan preferensi
+              yang berbeda dari generasi sebelumnya. Banyak dari mereka yang
+              lebih memilih bekerja freelance daripada bekerja kantoran dengan
+              sistem 9-to-5. Alasan mereka berbeda-beda, tetapi rata-rata karena
+              lebih menyukai pekerjaan yang fleksibel dan bisa dikerjakan di
+              mana saja. Apalagi, semenjak pandemi COVID-19, pekerjaan-pekerjaan
+              dapat dilakukan hanya dari rumah. Berikut penjelasan lebih lengkap
+              soal alasan Gen-Z lebih memilih freelance daripada kerja kantoran.
+            </p>
+          </article>
+        </section>
+
+        <aside>
+          <article>
+            <h3>Buronan Terpopuler</h3>
+            <figure style="margin-bottom: 15px">
+              <img
+                src="Assets/image/menyala abangku.jpg"
+                style="width: 100%; height: auto"
+                alt="Buronan"
+              />
+              <figcaption>Foto: Tersangka DPR Korup.</figcaption>
+            </figure>
+            <p>Siapa ini ???</p>
+          </article>
+        </aside>
+      </main>
+
+      <footer>
+        <p>&copy; 2024 Luqman Hakim</p>
+      </footer>
+    </div>
+
+    <script>
+      setInterval(() => {
+        const date = new Date();
+        const clock = document.getElementById("clock");
+        clock.innerHTML = date.toLocaleTimeString();
+      }, 1000);
+    </script>
+
+    <script>
+      const sliders = document.querySelectorAll(".slider");
+      let currentSliderIndex = 0;
+
+      function updateSliders() {
+        sliders.forEach((slider, index) => {
+          slider.style.display =
+            index === currentSliderIndex ? "block" : "none";
+        });
+      }
+
+      document.querySelector(".left").addEventListener("click", () => {
+        currentSliderIndex =
+          (currentSliderIndex - 1 + sliders.length) % sliders.length;
+        updateSliders();
+      });
+
+      document.querySelector(".right").addEventListener("click", () => {
+        currentSliderIndex = (currentSliderIndex + 1) % sliders.length;
+        updateSliders();
+      });
+
+      updateSliders();
+    </script>
+  </body>
+</html>

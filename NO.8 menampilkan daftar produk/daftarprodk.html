@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daftar Produk</title>
+    <link rel="stylesheet" href="./Assets/kar.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="Zoovie.html">Home</a></li>
+        </ul>
+      </nav>
+      <div id="clock"></div>
+    </header>
+    <h1>Produk Secret MamatGunshop</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Nama Produk</th>
+          <th>Harga</th>
+          <th>Ketersediaan Stok</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Pistol</td>
+          <td>Rp 10.000.000</td>
+          <td class="availability">Tersedia</td>
+        </tr>
+        <tr>
+          <td>SMG</td>
+          <td>Rp 20.000.000</td>
+          <td class="availability">Habis</td>
+        </tr>
+        <tr>
+          <td>Sniper</td>
+          <td>Rp 50.000.000</td>
+          <td class="availability">Tersedia</td>
+        </tr>
+        <tr>
+          <td>Shotgun</td>
+          <td>Rp 15.000.000</td>
+          <td class="availability">Tersedia</td>
+        </tr>
+        <tr>
+          <td>Assault Rifle</td>
+          <td>Rp 60.500.000</td>
+          <td class="availability">Habis</td>
+        </tr>
+        <tr>
+          <td>Submachine Gun</td>
+          <td>Rp 30.500.000</td>
+          <td class="availability">Tersedia</td>
+        </tr>
+      </tbody>
+    </table>
+    <script>
+      setInterval(() => {
+        const date = new Date();
+        const clock = document.getElementById("clock");
+        clock.innerHTML = date.toLocaleTimeString();
+      }, 1000);
+    </script>
+  </body>
+</html>

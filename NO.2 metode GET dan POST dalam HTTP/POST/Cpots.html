@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <title>Coba post</title>
+    <link rel="stylesheet" href="./Asset/sesuai.css" />
+  </head>
+
+  <form action="https://example.com/submit" method="POST">
+    Nama : <input type="text" name="nama" /><br />
+    Ulang Tahun : <input type="date" name="ulang tahun" /> <br />
+    Email : <input type="email" name="email" /> <br />
+    <input type="submit" value="Kirim" />
+  </form>
+
+  <!--jsnya-->
+  <script>
+    document.querySelector("form").addEventListener("submit", function (e) {
+      let nama = document.querySelector("input[name='nama']").value;
+      let ulangtahun = document.querySelector("input[name='usia']").value;
+      let email = document.querySelector("input[name='email']").value;
+      if (nama === "" || email === "") {
+        alert("Nama dan Email tidak boleh kosong!");
+        e.preventDefault();
+      }
+    });
+  </script>
+</html>

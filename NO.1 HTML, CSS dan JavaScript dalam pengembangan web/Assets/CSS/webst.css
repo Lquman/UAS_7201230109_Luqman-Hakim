@@ -1,0 +1,167 @@
+:root {
+  --blue1: #0d92f4;
+  --blue2: #77cdff;
+  --merah1: #f95454;
+  --hitam: #333;
+  --putih: #fff;
+  --gray-light: #f7f7f7;
+  --gray-dark: #888;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  color: var(--hitam);
+  background-color: var(--putih);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--blue1);
+  color: var(--merah1);
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--putih);
+}
+
+nav ul li:hover {
+  background-color: var(--putih);
+  color: var(--hitam);
+  border-radius: 5px;
+}
+
+#clock {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: var(--gray-light);
+}
+
+.Man-news {
+  background: var(--putih);
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: left;
+  color: var(--hitam);
+}
+
+.slider-container {
+  width: 80%;
+  max-width: 500px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  color: var(--hitam);
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+  text-align: center;
+}
+
+.slider img {
+  width: 80%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.nav-btns {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.nav-btns button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.nav-btns button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+}
+
+section {
+  background: var(--putih);
+  padding: 15px;
+  border-radius: 8px;
+}
+
+aside {
+  background: var(--gray-light);
+  padding: 15px;
+  border-radius: 8px;
+}
+
+article {
+  background: var(--putih);
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+article img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+footer {
+  text-align: center;
+  background-color: var(--hitam);
+  color: var(--putih);
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+}

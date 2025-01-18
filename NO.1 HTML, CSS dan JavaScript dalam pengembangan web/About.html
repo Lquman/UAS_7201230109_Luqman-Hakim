@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--start-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!--End-->
+
+    <title>About</title>
+    <link rel="stylesheet" href="./Assets/CSS/abot.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="Web.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+      <div id="clock"></div>
+    </header>
+    <main>
+      <section>
+        <article>
+          <h2>Selamat anda kena Prank</h2>
+          <p>By Luqman Hakim heheheh</p>
+        </article>
+      </section>
+    </main>
+    <script>
+      setInterval(() => {
+        const date = new Date();
+        const clock = document.getElementById("clock");
+        clock.innerHTML = date.toLocaleTimeString();
+      }, 1000);
+    </script>
+  </body>
+</html>

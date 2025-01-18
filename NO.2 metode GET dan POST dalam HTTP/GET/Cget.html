@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <title>Coba Get</title>
+    <link rel="stylesheet" href="./Asset/stly.css" />
+  </head>
+
+  <form action="https://example.com/submit" method="GET">
+    Nama : <input type="text" name="nama" /><br />
+    Search : <input type="url" name="url" />
+    <!--harus link url 
+    (https://www.google.com/search?q=translate&oq=&gs_lcrp=EgZjaHJvbWUqCQgAECMYJxjqAjIJCAAQIxgnGOoCMgkIARAjGCcY6gIyCQgCECMYJxjqAjIJCAMQIxgnGOoCMgkIBBAjGCcY6gIyDwgFEC4YJxjHARjqAhjRAzIJCAYQIxgnGOoCMgkIBxAjGCcY6gLSAQsyNTYzNjA3ajBqN6gCCLACAQ&sourceid=chrome&ie=UTF-8)-->
+    <input type="submit" value="Kirim" />
+  </form>
+
+  <!--jsnya-->
+  <script>
+    document.querySelector("form").addEventListener("submit", function (e) {
+      let nama = document.querySelector("input[name='nama']").value;
+      if (nama === "") {
+        alert("Nama tidak boleh kosong!");
+        e.preventDefault();
+      }
+    });
+  </script>
+</html>

@@ -1,0 +1,78 @@
+<!--Mengikutin link ni https://youtu.be/uZgfsQaL7JY?si=_HxILea4JG5h4S-F
+untuk jsnya https://youtu.be/lLBrgnYZjUE?si=UwO9dPspSt_0jAs mirip seperti ini-->
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>form login dan pendaftaran</title>
+    <link rel="stylesheet" href="Asset/jurag.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>Form Maweb</h2>
+      <div class="tab">
+        <button class="active" onclick="switchTab('login')">Login</button>
+        <button onclick="switchTab('register')">Daftar</button>
+      </div>
+
+      <div id="login-form" class="active">
+        <div class="form-group">
+          <input type="text" placeholder="Username" id="login-username" />
+        </div>
+        <div class="form-group">
+          <input type="password" placeholder="Password" id="login-password" />
+          <a href="#">Lupa password?</a>
+        </div>
+        <button class="login-btn">Submit</button>
+        <div class="register-link">
+          Blom Punya Akun kah?
+          <a href="#" onclick="switchTab('register')"> Yuk Daftar sekarang</a>
+        </div>
+      </div>
+
+      <div id="register-form">
+        <div class="form-group">
+          <input type="text" placeholder="Nama Lengkap" id="register-name" />
+        </div>
+        <div class="form-group">
+          <input
+            type="email"
+            placeholder="Masukkan Email"
+            id="register-email"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="password"
+            placeholder="Masukkan Password"
+            id="register-password"
+          />
+        </div>
+        <button class="register-btn">Submit</button>
+      </div>
+    </div>
+
+    <script>
+      function switchTab(tab) {
+        const loginForm = document.getElementById("login-form");
+        const registerForm = document.getElementById("register-form");
+        const buttons = document.querySelectorAll(".tab button");
+
+        if (tab === "login") {
+          loginForm.classList.add("active");
+          registerForm.classList.remove("active");
+          buttons[0].classList.add("active");
+          buttons[1].classList.remove("active");
+        } else {
+          registerForm.classList.add("active");
+          loginForm.classList.remove("active");
+          buttons[1].classList.add("active");
+          buttons[0].classList.remove("active");
+        }
+      }
+      switchTab("login");
+    </script>
+  </body>
+</html>
